@@ -1,3 +1,8 @@
+body
+    @media (min-width:2560px)
+        font-size: xx-large
+
+
 .bg-image
     background-image: url(../img/banner.jpg)
     height: 90vh
@@ -5,6 +10,20 @@
     background-blend-mode: darken
     background-repeat: no-repeat
     background-size: cover
+    animation: bg-img 4s ease-out
+    @keyframes bg-img
+        0%
+            opacity: 0.1
+        25%
+            opacity: 0.3
+        50%
+            opacity: 0.6
+        75%
+            opacity: 0.8
+        100%
+            opacity: 1
+        
+    
     div
         position: absolute
         text-align: center
@@ -18,6 +37,8 @@
             color: #adabab
             font-size: large
             font-weight: bold
+        button
+            animation: button-op 2s  infinite
 .sect2
     display: flex
     justify-content: space-evenly
@@ -62,6 +83,18 @@
         justify-content: center
         gap: 1rem
         border: none
+        animation: button-op 2s infinite
+        @keyframes button-op
+            0%
+                opacity: 0.1
+            25%
+                opacity: 0.3
+            50%
+                opacity: 0.6
+            75%
+                opacity: 0.8
+            100%
+                opacity: 1
 
 .sect4
     margin-top: 20px
@@ -72,11 +105,15 @@
     height: auto
     margin-top: 50px
     margin-bottom: 30px
-
+    @media (min-width:2560px)
+        *
+            margin: 8px
+    
     .sect4-child1
         display: flex
         justify-content: space-evenly
         gap: 2rem
+        
         @media (min-width: 375px) and (max-width: 425px)
             flex-direction: column
         .sect4-enfant1
@@ -87,6 +124,14 @@
                 img
                     border-radius: 50%
                     border: 5px solid #adabab
+                    animation: an-img 3s infinite
+                    @keyframes an-img
+                        100%
+                            transform: rotate(360deg)
+                        
+                    
+                    @media (min-width:2560px)
+                        margin-top: 7.5rem
                 h3
                     color: #bcb8b8
 
@@ -116,4 +161,6 @@
         margin-bottom: 20px
     h5
         margin-bottom: 30px
+    button
+        animation: button-op 2s infinite
 

@@ -12256,6 +12256,18 @@ header nav ul li a {
   text-decoration: none;
   color: white;
 }
+header nav ul li a:hover {
+  background-color: white;
+  color: black;
+  padding: 15px 15px;
+  font-weight: bold;
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: xx-large;
+  }
+}
 
 .bg-image {
   background-image: url(../img/banner.jpg);
@@ -12264,6 +12276,24 @@ header nav ul li a {
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: bg-img 4s ease-out;
+}
+@keyframes bg-img {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .bg-image div {
   position: absolute;
@@ -12280,6 +12310,9 @@ header nav ul li a {
   color: #adabab;
   font-size: large;
   font-weight: bold;
+}
+.bg-image div button {
+  animation: button-op 2s infinite;
 }
 
 .sect2 {
@@ -12338,6 +12371,24 @@ header nav ul li a {
   justify-content: center;
   gap: 1rem;
   border: none;
+  animation: button-op 2s infinite;
+}
+@keyframes button-op {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .sect4 {
@@ -12352,6 +12403,11 @@ header nav ul li a {
   height: auto;
   margin-top: 50px;
   margin-bottom: 30px;
+}
+@media (min-width: 2560px) {
+  .s4 * {
+    margin: 8px;
+  }
 }
 .s4 .sect4-child1 {
   display: flex;
@@ -12371,6 +12427,17 @@ header nav ul li a {
 .s4 .sect4-child1 .sect4-enfant1 div img {
   border-radius: 50%;
   border: 5px solid #adabab;
+  animation: an-img 3s infinite;
+}
+@keyframes an-img {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 2560px) {
+  .s4 .sect4-child1 .sect4-enfant1 div img {
+    margin-top: 7.5rem;
+  }
 }
 .s4 .sect4-child1 .sect4-enfant1 div h3, .s4 .sect4-child1 .sect4-enfant1 div .h3 {
   color: #bcb8b8;
@@ -12409,6 +12476,9 @@ header nav ul li a {
 }
 .sect5 h5, .sect5 .h5 {
   margin-bottom: 30px;
+}
+.sect5 button {
+  animation: button-op 2s infinite;
 }
 
 .sect6 {
